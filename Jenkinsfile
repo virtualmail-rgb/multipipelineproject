@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    triggers{
-        cron: '* 18 * * 1-5'
+    triggers { 
+        cron('* 18 * * 1-5')
     }
     stages{
         stage('Git clone'){
@@ -13,7 +13,7 @@ pipeline{
             }
         }
         stage('build'){
-            sh 'mvn clean package'
+            sh 'mvn clean install'
         } 
     }
     post {
