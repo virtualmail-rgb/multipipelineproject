@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Git clone'){
             steps{
-                git branch: 'uat', url: 'https://github.com/virtualmail-rgb/spring-petclinic.git'  
+                git branch: 'uat', url: 'https://github.com/virtualmail-rgb/multipipelineproject.git'  
                 mail subject: 'Git clone is successfull',
                         body: 'Clonning is successful',
                         to  : 'virtualdevops@gmail.com'
